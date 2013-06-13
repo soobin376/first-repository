@@ -1,9 +1,25 @@
 
-	import java.awt.*;
-	import java.awt.event.*;
-	import java.util.*;
-	import java.io.*;
-public class  memo extends Frame implements ActionListener ,KeyListener{
+	import java.awt.CheckboxMenuItem;
+import java.awt.FileDialog;
+import java.awt.Frame;
+import java.awt.Menu;
+import java.awt.MenuBar;
+import java.awt.MenuItem;
+import java.awt.Panel;
+import java.awt.TextArea;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.PrintStream;
+public class  memo extends Frame implements ActionListener ,KeyListener,WindowListener{
 		Panel p=new Panel();
 		String filename;
 		String filename2;
@@ -189,8 +205,21 @@ public class  memo extends Frame implements ActionListener ,KeyListener{
 		}
 		public void keyTyped(KeyEvent e){
 		}
+		public void windowActivated(WindowEvent e) {}
+        public void windowClosed(WindowEvent e) {
+        		System.exit(0);
+        }
+        public void windowClosing(WindowEvent e) {
+                System.exit(0);
+        }
+        public void windowDeactivated(WindowEvent e) {}
+        public void windowDeiconified(WindowEvent e) {}
+        public void windowIconified(WindowEvent e) {}
+        public void windowOpened(WindowEvent e) {}
 		public static void main(String[] args){
 			memo mm=new memo();
+			
 		}
+		
 	}
 
