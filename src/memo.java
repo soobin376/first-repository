@@ -11,6 +11,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.io.BufferedReader;
@@ -19,7 +20,7 @@ import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintStream;
-public class  memo extends Frame implements ActionListener ,KeyListener,WindowListener{
+public class  memo extends Frame implements ActionListener ,KeyListener{
 		Panel p=new Panel();
 		String filename;
 		String filename2;
@@ -134,6 +135,14 @@ public class  memo extends Frame implements ActionListener ,KeyListener,WindowLi
 		mii2.addActionListener(this);
 		mii3.addActionListener(this);
 		mii4.addActionListener(this);
+		this.addWindowListener(new WindowAdapter() {
+
+			   public void windowClosing(WindowEvent e) {
+
+			    System.exit(0);
+			   }
+			  }); 
+
 		setSize(500,500);
 		setVisible(true);
 		}
@@ -205,17 +214,7 @@ public class  memo extends Frame implements ActionListener ,KeyListener,WindowLi
 		}
 		public void keyTyped(KeyEvent e){
 		}
-		public void windowActivated(WindowEvent e) {}
-        public void windowClosed(WindowEvent e) {
-        		System.exit(0);
-        }
-        public void windowClosing(WindowEvent e) {
-                System.exit(0);
-        }
-        public void windowDeactivated(WindowEvent e) {}
-        public void windowDeiconified(WindowEvent e) {}
-        public void windowIconified(WindowEvent e) {}
-        public void windowOpened(WindowEvent e) {}
+		
 		public static void main(String[] args){
 			memo mm=new memo();
 			
