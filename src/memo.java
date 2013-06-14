@@ -143,7 +143,7 @@ public class  memo extends Frame implements ActionListener ,KeyListener{
 			   }
 			  }); 
 
-		setSize(500,500);
+		setSize(500,600);
 		setVisible(true);
 		}
 
