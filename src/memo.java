@@ -208,6 +208,9 @@ public class  memo extends Frame implements ActionListener ,KeyListener{
 				text=ta.getSelectedText();
 				start=ta.getSelectionStart();
 				end=ta.getSelectionEnd();
+				if(ke.getKeyCode()==ke.VK_C){
+					text=ta.getSelectedText();
+				}
 				}
 				if(ke.getKeyCode()==ke.VK_ESCAPE){
 					super.setLocation(10,10);
