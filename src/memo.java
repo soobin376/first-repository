@@ -1,5 +1,4 @@
-
-	import java.awt.CheckboxMenuItem;
+import java.awt.CheckboxMenuItem;
 import java.awt.FileDialog;
 import java.awt.Frame;
 import java.awt.Menu;
@@ -90,7 +89,6 @@ public class  memo extends Frame implements ActionListener ,KeyListener{
 		miiii1=new MenuItem("상태표시줄(S)");
 		miiiii1=new MenuItem("도움말 항목(H)");
 		miiiii2=new MenuItem("메모장 정보(A)");
-		
 
 		setMenuBar(mb);
 		mb.add(m1);
@@ -213,7 +211,7 @@ public class  memo extends Frame implements ActionListener ,KeyListener{
 				}
 				}
 				if(ke.getKeyCode()==ke.VK_ESCAPE){
-					super.setLocation(10,10);
+					super.setLocation(100,100);
 				}
 		}
 		public void keyReleased(KeyEvent e){
